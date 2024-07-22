@@ -1,0 +1,20 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "description": "As a project related to ZTM academy-Node developer course",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm run install-client && npm run install-server",
+    "server": "npm run watch --prefix server",
+    "client": "npm run start --prefix client",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "deploy": "npm run build --prefix client && npm start --prefix server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
